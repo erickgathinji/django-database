@@ -5,6 +5,7 @@ from sacco.models import Customer, Deposit
 
 
 # Create your views here.
+# This below folded table is the initial test table
 def test(request):
     # save a customer
     # c1 = Customer(first_name='Sam', last_name='Kim', email='kim@haveen.com', dob='1999-6-03', gender='Male',
@@ -27,5 +28,8 @@ def test(request):
     deposit_count = Deposit.objects.count()
 
 
-    return HttpResponse(f"Ok, Done. We have {customer_count} customers and {deposit_count} deposits")
+    return HttpResponse(f"Ok, Done. We have {customer_count} customers and {deposit_count} deposits") # Create your views here.
 
+def customers(request):
+    data = Customer.objects.all() # select * from customers
+    return render(request, "customers.html", {"customers": data})

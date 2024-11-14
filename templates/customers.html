@@ -1,0 +1,41 @@
+{% extends 'master.html' %}
+
+{% block title %}
+    <title>Sacco Customers</title>
+{% endblock %}
+
+
+{% block content %}
+    <div class="container">
+        <h2>Sacco Customers</h2>
+        {#    Create Table#}
+        <table class="table table-striped">
+            <thead> {# #Not a must to wrap content here - thead  #}
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Joining Date</th>
+            </tr>
+            </thead>
+
+            {#Add a loop - just type fore#}
+            {% for customer in customers %}
+                <tr>
+                    <td>{{ customer.id }}</td>
+                    {# #from database  #}
+                    <td>{{ customer.first_name }}</td>
+                    <td>{{ customer.email }}</td>
+                    <td>{{ customer.email }}</td>
+                    <td>{{ customer.created_at }}</td>
+                </tr>
+            {% empty %}
+                <p>No customers in the sacco</p>
+            {% endfor %}
+            
+
+        </table>
+    </div>
+
+{% endblock %}

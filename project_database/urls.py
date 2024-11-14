@@ -21,8 +21,7 @@ from sacco import views
 
 urlpatterns = [
 
-    path('', views.test, name='test'), #add /test on host url in browser if you specified 'test'
-
+    path('', views.customers, name='customers'), #add /customers on host url in browser if you specified 'test'
 
 
     path('admin/', admin.site.urls),

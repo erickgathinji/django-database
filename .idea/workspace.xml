@@ -5,63 +5,72 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95cc056f-c229-4faa-b451-38afc17e1e83" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/project_database.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project_database/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project_database/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project_database/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project_database/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project_database/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sacco/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sacco/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sacco/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sacco/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sacco/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sacco/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sacco/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/customers.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/master.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project_database/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/project_database/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sacco/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/sacco/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;erickgathinji&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/erickgathinji/django-database.git&quot;,
+    &quot;accountId&quot;: &quot;2e2eb960-4be2-4a36-9818-c4dc78797d3e&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2ojrSV0h9aty9E0uSUhqCUVqzbZ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Django Server.project_database.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Django Server.project_database.executor": "Run",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "django.template.preview.state": "SHOW_EDITOR_AND_PREVIEW",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlite&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="project_database" type="Python.DjangoServer" factoryName="Django server">
       <module name="project_database" />
@@ -106,7 +115,8 @@
       <option name="presentableId" value="Default" />
       <updated>1731393825574</updated>
       <workItem from="1731393827315" duration="2868000" />
-      <workItem from="1731474616787" duration="7639000" />
+      <workItem from="1731474616787" duration="7941000" />
+      <workItem from="1731561475496" duration="3020000" />
     </task>
     <servers />
   </component>
