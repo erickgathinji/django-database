@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95cc056f-c229-4faa-b451-38afc17e1e83" name="Changes" comment="import data">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_database/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/project_database/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sacco/management/commands/populate.py" beforeDir="false" afterPath="$PROJECT_DIR$/sacco/management/commands/populate.py" afterDir="false" />
+    <list default="true" id="95cc056f-c229-4faa-b451-38afc17e1e83" name="Changes" comment="delete data">
       <change beforePath="$PROJECT_DIR$/sacco/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/sacco/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/customers.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/customers.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +119,7 @@
       <updated>1731393825574</updated>
       <workItem from="1731393827315" duration="2868000" />
       <workItem from="1731474616787" duration="7941000" />
-      <workItem from="1731561475496" duration="7928000" />
+      <workItem from="1731561475496" duration="8652000" />
     </task>
     <task id="LOCAL-00001" summary="display database data">
       <option name="closed" value="true" />
@@ -142,7 +137,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731566862172</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="delete data">
+      <option name="closed" value="true" />
+      <created>1731569572017</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731569572017</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,7 +154,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="display database data" />
     <MESSAGE value="import data" />
-    <option name="LAST_COMMIT_MESSAGE" value="import data" />
+    <MESSAGE value="delete data" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete data" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
