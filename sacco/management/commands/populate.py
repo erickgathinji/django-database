@@ -110,6 +110,11 @@ class Command(BaseCommand):
             customer = Customer(**c)
             customer.save()
 
-        self.stdout.write(
+        self.stdout.write( #should be outside the loop-- on same line as for
             self.style.SUCCESS('Successfully populated customers')
         )
+
+        print("Populated customers") #Alternative to above...
+
+# python manage.py populate
+
