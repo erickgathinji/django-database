@@ -39,3 +39,8 @@ def delete_customer(request, customer_id):
     customer= Customer.objects.get(id=customer_id) # select * from customers where id = ?
     customer.delete() #delete from customers where id = ?
     return redirect('customers') #this redirect needs the exact name in urls page. ie name=customers
+
+
+def add_customer(request):
+
+    return render(request, 'customer_form.html')
