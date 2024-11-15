@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 
+from sacco.app_forms import CustomerForm
 from sacco.models import Customer, Deposit
 
 
@@ -31,7 +32,7 @@ def test(request):
     return HttpResponse(f"Ok, Done. We have {customer_count} customers and {deposit_count} deposits") # Create your views here.
 
 def customers(request):
-    data = Customer.objects.all() # select * from customers
+    data = Customer.objects.all().order_by('-id').values() # select * from customers
     return render(request, "customers.html", {"customers": data})
 
 
@@ -42,5 +43,20 @@ def delete_customer(request, customer_id):
 
 
 def add_customer(request):
+    if request.method == "POST": # save your form data to db
+        form = CustomerForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('customers')
+    else:
+        form = CustomerForm()
+    return render(request, 'customer_form.html', {"form": form})
 
-    return render(request, 'customer_form.html')
+
+#install these apps - then load them up under settings - installed apps
+# pip install django-crispy-forms
+# pip install crispy-bootstrap5
+
+
+
+
