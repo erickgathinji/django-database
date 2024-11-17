@@ -1,0 +1,43 @@
+{% extends 'master.html' %}
+
+{% block title %}
+    <title>Customer Details</title>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <table class="table table-striped">
+
+                    <tr>
+                        <td class="h6">First Name</td>
+                        <td>{{ customer.first_name }}</td>
+                    </tr>
+
+                    <tr>
+                        <td class="h6">Email</td>
+                        <td>{{ customer.email }}</td>
+                    </tr>
+
+                    <tr>
+                        <td class="h6">Date of Birth</td>
+                        <td>{{ customer.dob | date:"d-m-Y" }}</td>
+                        {#| date:"d-m-Y" makes the date kenyan format#}
+                    </tr>
+
+                    <tr>
+                        <td class="h6">Gender</td>
+                        <td>{{ customer.gender }}</td>
+                    </tr>
+
+                    <tr>
+                        <td class="h6">Weight in Kgs</td>
+                        <td>{{ customer.weight }}</td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -30,9 +30,13 @@
                     <td>{{ customer.first_name }}</td>
                     <td>{{ customer.last_name }}</td>
                     <td>{{ customer.email }}</td>
-                    <td>{{ customer.created_at }}</td>
+                    <td>{{ customer.created_at | date:"d-m-Y" }}</td>
+                    {#| date:"d-m-Y" makes the date kenyan format#}
                     <td>
                         <a class="btn btn-danger" href="{% url 'delete_customer' customer.id %}">Remove</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-primary" href="{% url 'customer_details' customer.id %}">Details</a>
                     </td>
                 </tr>
             {% empty %}
@@ -40,7 +44,7 @@
             {% endfor %}
 
         </table>
-    
+
         {#Pagination navigation#}
         <div class="row justify-content-center">
             <div class="col-sm-2">
@@ -48,7 +52,7 @@
                     <a class="btn btn-outline-info btn-sm" href="?page={{ data.previous_page_number }}"> << </a>
                 {% endif %}
 
-                <span class="mx-3" >{{ data.number }}</span>
+                <span class="mx-3">{{ data.number }}</span>
 
                 {% if data.has_next %}
                     <a class="btn btn-outline-info btn-sm" href="?page={{ data.next_page_number }}"> >> </a>
