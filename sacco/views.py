@@ -33,8 +33,8 @@ def test(request):
     return HttpResponse(f"Ok, Done. We have {customer_count} customers and {deposit_count} deposits") # Create your views here.
 
 def customers(request):
-    # data = Customer.objects.all().order_by('-id').values() # select * from customers
-    data = Customer.objects.all().order_by('id').values()
+    # data = Customer.objects.all().order_by('-id').values() #id without - sorts from 1
+    data = Customer.objects.all().order_by('-id').values() # select * from customers
     paginator = Paginator(data, 10)
     page_number = request.GET.get('page', 1) #1 is a default page loaded if the page input is missing
     try:
