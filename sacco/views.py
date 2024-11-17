@@ -1,3 +1,4 @@
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 
@@ -32,8 +33,16 @@ def test(request):
     return HttpResponse(f"Ok, Done. We have {customer_count} customers and {deposit_count} deposits") # Create your views here.
 
 def customers(request):
-    data = Customer.objects.all().order_by('-id').values() # select * from customers
-    return render(request, "customers.html", {"customers": data})
+    # data = Customer.objects.all().order_by('-id').values() # select * from customers
+    data = Customer.objects.all().order_by('id').values()
+    paginator = Paginator(data, 10)
+    page_number = request.GET.get('page', 1) #1 is a default page loaded if the page input is missing
+    try:
+        paginated_data = paginator.page(page_number)
+    except PageNotAnInteger | EmptyPage  :
+        paginated_data = paginator.page(1) #1 is a default page loaded if the page input is invalid
+
+    return render(request, "customers.html", {"data": paginated_data}) #note that the data object carries key paginated information. also used in the customers.html loop
 
 
 def delete_customer(request, customer_id):
