@@ -1,4 +1,5 @@
 {% extends 'master.html' %}
+{% load static %}
 
 {% block title %}
     <title>Customer Details</title>
@@ -6,7 +7,7 @@
 
 {% block content %}
     <div class="container">
-        <div class="row">
+        <div class="row mt-2">
             <div class="col-sm-4">
                 <table class="table table-striped">
 
@@ -38,6 +39,30 @@
 
                 </table>
             </div>
+
+            <div class="col-sm-4">
+                <img src="{% static 'profile.png' %}" alt="">
+            </div>
+
+            <div class="col-sm-4">
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+                    {% for depo in deposits %}
+                        <tr>
+                            <td>{{ depo.created_at | date:"d-m-Y" }}</td>
+                            <td>{{ depo.amount }}</td>
+                            <td>{{ depo.status }}</td>
+                        </tr>
+                    {% endfor %}
+
+
+                </table>
+            </div>
+
         </div>
     </div>
 {% endblock %}
