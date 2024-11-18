@@ -1,4 +1,14 @@
+import os
+import uuid
+
 from django.db import models
+
+def generate_unique_name (instance, filename): #function for generating  unique name for a profile image uploaded
+    # kenya.png -- djhlssajgljlds-kenya.png
+    name = uuid.uuid4() #universally unique id
+    full_file_name = f'{name}-{filename}'
+    return os.path.join("profile_pictures", full_file_name) # prof_pics/sdhlsdfjdh-kenya.png
+
 
 # Create your models here.
 #These are your tables
@@ -10,6 +20,7 @@ class Customer(models.Model):
     dob = models.DateField()
     gender = models.CharField(max_length=10)
     weight = models.IntegerField(default=0)
+    profile_pic = models.ImageField(upload_to=generate_unique_name, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

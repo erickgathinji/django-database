@@ -63,7 +63,7 @@ def customer_details(request, customer_id):
 
 def add_customer(request):
     if request.method == "POST":  # save your form data to db
-        form = CustomerForm(request.POST)
+        form = CustomerForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return redirect('customers')
@@ -75,7 +75,7 @@ def add_customer(request):
 def update_customer(request, customer_id):
     customer = get_object_or_404(Customer, id=customer_id)
     if request.method == "POST":
-        form = CustomerForm(request.POST, instance=customer)
+        form = CustomerForm(request.POST, request.FILES, instance=customer)
         if form.is_valid():
             form.save()
             return redirect('customers')

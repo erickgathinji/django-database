@@ -9,7 +9,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-sm-4 border my-4 p-3">
-                <form action="" method="post"> {# Add the url created#} 
+                <form action="" method="post" enctype="multipart/form-data"> {# enctype when input is always text and media#} 
                     {% csrf_token %}
                     {{ form | crispy }}
                     
