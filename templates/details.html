@@ -36,21 +36,29 @@
                         <td class="h6">Weight in Kgs</td>
                         <td>{{ customer.weight }}</td>
                     </tr>
-                    
+
                     <tr>
                         <td class="h6">Total Deposit</td>
-                        <td>{{ total }}</td> {#total is not part of customer#}
+                        <td>{{ total }}</td>
+                        {#total is not part of customer#}
                     </tr>
 
                 </table>
             </div>
 
             <div class="col-sm-4">
-                <img src="{% static 'profile.png' %}" alt="">
+                <p class="text-center"> Profile Picture </p>
+                {% if customer.profile_pic %}
+                    <img class="img-fluid mx-auto d-block profile" src="{{ customer.profile_pic.url }}" alt="">
+                {% else %}
+                    <img class="img-fluid mx-auto d-block profile" src="{% static 'profile.png' %}" alt="">
+                {% endif %}
+
             </div>
 
             <div class="col-sm-4">
-                <table class="table table-bordered">
+                <p>Deposits</p>
+                <table class="table table-striped">
                     <tr>
                         <th>Date</th>
                         <th>Amount</th>

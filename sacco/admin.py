@@ -20,7 +20,6 @@ class DepositAdmin(admin.ModelAdmin):
 
 
 
-
 admin.site.register(Customer, CustomerAdmin)
 admin.site.register(Deposit, DepositAdmin)
 
