@@ -1,6 +1,6 @@
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.http import HttpResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 
 from sacco.app_forms import CustomerForm
 from sacco.models import Customer, Deposit
@@ -64,6 +64,18 @@ def add_customer(request):
     else:
         form = CustomerForm()
     return render(request, 'customer_form.html', {"form": form})
+
+def update_customer(request, customer_id):
+    customer = get_object_or_404(Customer, id=customer_id)
+    if request.method == "POST":
+        form = CustomerForm(request.POST, instance=customer)
+        if form.is_valid():
+            form.save()
+            return redirect('customers')
+    else:
+        form = CustomerForm(instance=customer)
+    return render(request, 'customer_update_form.html', {"form": form})
+
 
 
 #install these apps - then load them up under settings - installed apps

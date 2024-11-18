@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95cc056f-c229-4faa-b451-38afc17e1e83" name="Changes" comment="displaying customer details">
-      <change afterPath="$PROJECT_DIR$/sacco/static/profile.png" afterDir="false" />
+    <list default="true" id="95cc056f-c229-4faa-b451-38afc17e1e83" name="Changes" comment="radio button">
+      <change afterPath="$PROJECT_DIR$/templates/customer_update_form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_database/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/project_database/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project_database/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/project_database/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sacco/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/sacco/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +57,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "django.template.preview.state": "SHOW_EDITOR_AND_PREVIEW",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Eric Gathinji/Desktop/project_database/sacco/static",
+    "last_opened_file_path": "C:/Users/Eric Gathinji/Desktop/project_database/templates",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -73,6 +73,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Eric Gathinji\Desktop\project_database\templates" />
       <recent name="C:\Users\Eric Gathinji\Desktop\project_database\sacco\static" />
       <recent name="C:\Users\Eric Gathinji\Desktop\project_database\sacco\management\commands" />
       <recent name="C:\Users\Eric Gathinji\Desktop\project_database\sacco\management" />
@@ -128,7 +129,7 @@
       <workItem from="1731616854724" duration="99000" />
       <workItem from="1731647213217" duration="1191000" />
       <workItem from="1731648804457" duration="8513000" />
-      <workItem from="1731877016133" duration="8112000" />
+      <workItem from="1731877016133" duration="11612000" />
     </task>
     <task id="LOCAL-00001" summary="display database data">
       <option name="closed" value="true" />
@@ -202,7 +203,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731882900252</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="displaying customer details">
+      <option name="closed" value="true" />
+      <created>1731885178026</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1731885178026</updated>
+    </task>
+    <task id="LOCAL-00011" summary="radio button">
+      <option name="closed" value="true" />
+      <created>1731887841659</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1731887841659</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,7 +232,8 @@
     <MESSAGE value="django forms" />
     <MESSAGE value="pagination" />
     <MESSAGE value="displaying customer details" />
-    <option name="LAST_COMMIT_MESSAGE" value="displaying customer details" />
+    <MESSAGE value="radio button" />
+    <option name="LAST_COMMIT_MESSAGE" value="radio button" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -224,6 +242,11 @@
           <url>file://$PROJECT_DIR$/sacco/management/commands/populate.py</url>
           <line>8</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/sacco/views.py</url>
+          <line>57</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
