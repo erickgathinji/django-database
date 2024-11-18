@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95cc056f-c229-4faa-b451-38afc17e1e83" name="Changes" comment="radio button">
-      <change afterPath="$PROJECT_DIR$/templates/customer_update_form.html" afterDir="false" />
+    <list default="true" id="95cc056f-c229-4faa-b451-38afc17e1e83" name="Changes" comment="update customer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_database/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/project_database/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sacco/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/sacco/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +126,7 @@
       <workItem from="1731616854724" duration="99000" />
       <workItem from="1731647213217" duration="1191000" />
       <workItem from="1731648804457" duration="8513000" />
-      <workItem from="1731877016133" duration="11612000" />
+      <workItem from="1731877016133" duration="12417000" />
     </task>
     <task id="LOCAL-00001" summary="display database data">
       <option name="closed" value="true" />
@@ -219,7 +216,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731887841659</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="update customer">
+      <option name="closed" value="true" />
+      <created>1731889179760</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1731889179760</updated>
+    </task>
+    <task id="LOCAL-00013" summary="update customer">
+      <option name="closed" value="true" />
+      <created>1731889817012</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1731889817012</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,7 +246,8 @@
     <MESSAGE value="pagination" />
     <MESSAGE value="displaying customer details" />
     <MESSAGE value="radio button" />
-    <option name="LAST_COMMIT_MESSAGE" value="radio button" />
+    <MESSAGE value="update customer" />
+    <option name="LAST_COMMIT_MESSAGE" value="update customer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
