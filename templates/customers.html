@@ -19,6 +19,7 @@
                 <th>Joining Date</th>
                 <th>Delete</th>
                 <th>Details</th>
+                <th>Update</th>
             </tr>
             </thead>
 
@@ -32,12 +33,20 @@
                     <td>{{ customer.email }}</td>
                     <td>{{ customer.created_at | date:"d-m-Y" }}</td>
                     {#| date:"d-m-Y" makes the date kenyan format#}
+                    
+                    {#Buttons#}
                     <td>
-                        <a class="btn btn-danger" href="{% url 'delete_customer' customer.id %}">Remove</a>
+                        <a class="btn btn-danger btn-sm" href="{% url 'delete_customer' customer.id %}">Remove</a>
                     </td>
+                    
                     <td>
-                        <a class="btn btn-primary" href="{% url 'customer_details' customer.id %}">Details</a>
+                        <a class="btn btn-primary btn-sm" href="{% url 'customer_details' customer.id %}">Details</a>
                     </td>
+                    
+                    <td>
+                        <a class="btn btn-success btn-sm" href="{% url 'update_customer' customer.id %}">Update</a>
+                    </td>
+                
                 </tr>
             {% empty %}
                 <p>No customers in the sacco</p>
