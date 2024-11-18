@@ -4,11 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95cc056f-c229-4faa-b451-38afc17e1e83" name="Changes" comment="requirements" />
+    <list default="true" id="95cc056f-c229-4faa-b451-38afc17e1e83" name="Changes" comment="requirements">
+      <change afterPath="$PROJECT_DIR$/templates/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project_database/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/project_database/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sacco/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/sacco/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/master.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/master.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -58,6 +68,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -125,7 +136,10 @@
       <workItem from="1731647213217" duration="1191000" />
       <workItem from="1731648804457" duration="8513000" />
       <workItem from="1731877016133" duration="12417000" />
-      <workItem from="1731890332115" duration="300000" />
+      <workItem from="1731890332115" duration="477000" />
+      <workItem from="1731892140101" duration="23000" />
+      <workItem from="1731895011316" duration="334000" />
+      <workItem from="1731896031432" duration="2831000" />
     </task>
     <task id="LOCAL-00001" summary="display database data">
       <option name="closed" value="true" />
@@ -239,7 +253,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731890535039</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="requirements">
+      <option name="closed" value="true" />
+      <created>1731890662363</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1731890662363</updated>
+    </task>
+    <task id="LOCAL-00016" summary="requirements">
+      <option name="closed" value="true" />
+      <created>1731890729621</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1731890729621</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,11 +294,6 @@
           <url>file://$PROJECT_DIR$/sacco/management/commands/populate.py</url>
           <line>8</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/sacco/views.py</url>
-          <line>57</line>
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

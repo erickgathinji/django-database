@@ -33,5 +33,8 @@ urlpatterns = [
 
     path('customers/update/<int:customer_id>', views.update_customer, name='update_customer'),
 
+    path('customers/search', views.search_customer, name='search_customer'),
+    # the name is associated with the master.html navbar search - action
+
     path('admin/', admin.site.urls),
 ]
