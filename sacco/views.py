@@ -3,7 +3,7 @@ from django.db.models import Q
 from django.http import HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
 
-from sacco.app_forms import CustomerForm
+from sacco.app_forms import CustomerForm, DepositForm
 from sacco.models import Customer, Deposit
 
 
@@ -90,7 +90,6 @@ def search_customer(request):
         Q(first_name__icontains=search_term) | Q(last_name__icontains=search_term) | Q(email__icontains=search_term))
     # data = generates select * from customers where first_name LIKE '%noel%' OR last_name LIKE '%noel%'
 
-
     # paste paginator info from customers function, then factor in the html pg, and the above data variable
     paginator = Paginator(data, 10)
     page_number = request.GET.get('page', 1)  # 1 is a default page loaded if the page input is missing
@@ -102,7 +101,17 @@ def search_customer(request):
     return render(request, "search.html", {
         "data": paginated_data, "customer": data})
 
+def deposit(request, customer_id):
+    customer = get_object_or_404(Customer, id=customer_id)
+    if request.method == "POST":
+        form = DepositForm(request.POST)
+        if form.is_valid():
+            amount = form.cleaned_data['amount']
+            depo = Deposit(amount=amount, status=True, customer=customer)
+            depo.save()
+            return redirect('customers')
+    else:
+        form = DepositForm()
+    return render(request, 'deposit_form.html', {"form": form, 'customer': customer})
 
-# install these apps - then load them up under settings - installed apps
-# pip install django-crispy-forms
-# pip install crispy-bootstrap5
+
