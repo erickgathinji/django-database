@@ -1,5 +1,6 @@
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.db.models import Q, Sum
 from django.http import HttpResponse
@@ -36,7 +37,7 @@ def test(request):
     return HttpResponse(
         f"Ok, Done. We have {customer_count} customers and {deposit_count} deposits")  # Create your views here.
 
-
+@login_required #ensure LOGIN_URL = 'login' is defined in settings otherwise define in brackets beside the decoration
 def customers(request):
     # data = Customer.objects.all().order_by('-id').values() #id without - sorts from 1
     data = Customer.objects.all().order_by('-id').values()  # select * from customers
@@ -50,21 +51,21 @@ def customers(request):
     return render(request, "customers.html", {
         "data": paginated_data})  # note that the data object carries key paginated information. also used in the customers.html loop
 
-
+@login_required
 def delete_customer(request, customer_id):
     customer = Customer.objects.get(id=customer_id)  # select * from customers where id = ?
     customer.delete()  # delete from customers where id = ?
     messages.info(request, f"Customer {customer.first_name} was deleted!")
     return redirect('customers')  # this redirect needs the exact name in urls page. ie name=customers
 
-
+@login_required
 def customer_details(request, customer_id):
     customer = Customer.objects.get(id=customer_id)
     deposits = Deposit.objects.filter(customer_id=customer_id)
     total = Deposit.objects.filter(customer=customer).filter(status=True).aggregate(Sum('amount'))['amount__sum']
     return render(request, "details.html", {'deposits': deposits, 'customer': customer, 'total': total})
 
-
+@login_required
 def add_customer(request):
     if request.method == "POST":  # save your form data to db
         form = CustomerForm(request.POST, request.FILES)
@@ -76,7 +77,7 @@ def add_customer(request):
         form = CustomerForm()
     return render(request, 'customer_form.html', {"form": form})
 
-
+@login_required
 def update_customer(request, customer_id):
     customer = get_object_or_404(Customer, id=customer_id)
     if request.method == "POST":
@@ -89,7 +90,7 @@ def update_customer(request, customer_id):
         form = CustomerForm(instance=customer)
     return render(request, 'customer_update_form.html', {"form": form})
 
-
+@login_required
 def search_customer(request):
     search_term = request.GET.get(
         'search')  # the search (in brackets) must match to the name put in master.html navbar search - input
@@ -108,6 +109,7 @@ def search_customer(request):
     return render(request, "search.html", {
         "data": paginated_data, "customer": data})
 
+@login_required
 def deposit(request, customer_id):
     customer = get_object_or_404(Customer, id=customer_id)
     if request.method == "POST":
@@ -139,7 +141,7 @@ def login_user(request):
         messages.error(request, 'Invalid username or password!')
         return render(request, "login_form.html", {"form": form})
 
-
+@login_required
 def signout_user(request):
     logout(request)
     return redirect ('login')
