@@ -23,22 +23,29 @@ from sacco import views
 
 urlpatterns = [
 
-    path('', views.customers, name='customers'),  # add /customers on host url in browser if you specified 'test'
+                  path('', views.customers, name='customers'),
+                  # add /customers on host url in browser if you specified 'test'
 
-    path('add/customer', views.add_customer, name='add_customer'),
+                  path('add/customer', views.add_customer, name='add_customer'),
 
-    path('customers/delete/<int:customer_id>', views.delete_customer, name='delete_customer'),
-    # this is the delete button
+                  path('customers/delete/<int:customer_id>', views.delete_customer, name='delete_customer'),
+                  # this is the delete button
 
-    path('customers/details/<int:customer_id>', views.customer_details, name='customer_details'),
-    # this is the details button
+                  path('customers/details/<int:customer_id>', views.customer_details, name='customer_details'),
+                  # this is the details button
 
-    path('customers/update/<int:customer_id>', views.update_customer, name='update_customer'),
+                  path('customers/update/<int:customer_id>', views.update_customer, name='update_customer'),
 
-    path('customers/search', views.search_customer, name='search_customer'),
-    # the name is associated with the master.html navbar search - action
+                  path('customers/search', views.search_customer, name='search_customer'),
+                  # the name is associated with the master.html navbar search - action
 
-    path('customers/deposit/<int:customer_id>', views.deposit, name='deposit'),
+                  path('customers/deposit/<int:customer_id>', views.deposit, name='deposit'),
 
-    path('admin/', admin.site.urls),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+                  path('login', views.login_user, name='login'),
+
+                  path('logout', views.signout_user, name='logout'),
+
+
+
+                  path('admin/', admin.site.urls),
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
