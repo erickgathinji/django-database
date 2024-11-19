@@ -36,21 +36,34 @@
                     {#| date:"d-m-Y" makes the date kenyan format#}
 
                     {#Buttons#}
-                    <td>
-                        <a class="btn btn-danger btn-sm" href="{% url 'delete_customer' customer.id %}">Remove</a>
-                    </td>
 
-                    <td>
-                        <a class="btn btn-info btn-sm" href="{% url 'customer_details' customer.id %}">Details</a>
-                    </td>
+                    {#                    {% if request.user.has_perm %}#}
+                    {% if perms.sacco.delete_customer %}
+                        <td>
+                            <a class="btn btn-danger btn-sm" href="{% url 'delete_customer' customer.id %}">Remove</a>
+                        </td>
+                    {% endif %}
 
-                    <td>
-                        <a class="btn btn-secondary btn-sm" href="{% url 'update_customer' customer.id %}">Update</a>
-                    </td>
 
-                    <td>
-                        <a class="btn btn-primary btn-sm" href="{% url 'deposit' customer.id %}">Deposit</a>
-                    </td>
+                    {% if perms.sacco.view_customer %}
+                        <td>
+                            <a class="btn btn-info btn-sm" href="{% url 'customer_details' customer.id %}">Details</a>
+                        </td>
+                    {% endif %}
+
+
+                    {% if perms.sacco.change_customer %}
+                        <td>
+                            <a class="btn btn-secondary btn-sm"
+                               href="{% url 'update_customer' customer.id %}">Update</a>
+                        </td>
+                    {% endif %}
+
+                    {% if perms.sacco.change_customer %}
+                        <td>
+                            <a class="btn btn-primary btn-sm" href="{% url 'deposit' customer.id %}">Deposit</a>
+                        </td>
+                    {% endif %}
 
                 </tr>
             {% empty %}
