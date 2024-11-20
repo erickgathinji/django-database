@@ -37,31 +37,52 @@
 
                     {#Buttons#}
 
-                    {#                    {% if request.user.has_perm %}#}
+                    {#Delete#}
+                    {#{% if request.user.has_perm %}#}
                     {% if perms.sacco.delete_customer %}
                         <td>
                             <a class="btn btn-danger btn-sm" href="{% url 'delete_customer' customer.id %}">Remove</a>
                         </td>
-                    {% endif %}
-
-
-                    {% if perms.sacco.view_customer %}
+                    {% else %}
                         <td>
-                            <a class="btn btn-info btn-sm" href="{% url 'customer_details' customer.id %}">Details</a>
+                            <button class="btn btn-sm disabled">Action</button>
                         </td>
                     {% endif %}
 
 
+                    {#Details#}
+                    {% if perms.sacco.view_customer %}
+                        <td>
+                            <a class="btn btn-info btn-sm" href="{% url 'customer_details' customer.id %}">Details</a>
+                        </td>
+                    {% else %}
+                        <td>
+                            <button class="btn btn-sm disabled">Action</button>
+                        </td>
+                    {% endif %}
+
+
+                    {#Update#}
                     {% if perms.sacco.change_customer %}
                         <td>
                             <a class="btn btn-secondary btn-sm"
                                href="{% url 'update_customer' customer.id %}">Update</a>
                         </td>
+                    {% else %}
+                        <td>
+                            <button class="btn btn-sm disabled">Action</button>
+                        </td>
                     {% endif %}
 
+
+                    {#Deposit#}
                     {% if perms.sacco.change_customer %}
                         <td>
                             <a class="btn btn-primary btn-sm" href="{% url 'deposit' customer.id %}">Deposit</a>
+                        </td>
+                    {% else %}
+                        <td>
+                            <button class="btn btn-sm disabled">Action</button>
                         </td>
                     {% endif %}
 

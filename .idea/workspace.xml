@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95cc056f-c229-4faa-b451-38afc17e1e83" name="Changes" comment="login">
+    <list default="true" id="95cc056f-c229-4faa-b451-38afc17e1e83" name="Changes" comment="permissions/security">
+      <change afterPath="$PROJECT_DIR$/templates/404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sacco/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/sacco/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/403.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/403.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/customers.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/customers.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +139,9 @@
       <workItem from="1731892140101" duration="23000" />
       <workItem from="1731895011316" duration="334000" />
       <workItem from="1731896031432" duration="19839000" />
-      <workItem from="1731993263539" duration="6382000" />
+      <workItem from="1731993263539" duration="8173000" />
+      <workItem from="1732079257251" duration="1702000" />
+      <workItem from="1732089958118" duration="847000" />
     </task>
     <task id="LOCAL-00001" summary="display database data">
       <option name="closed" value="true" />
@@ -339,7 +343,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731998235888</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="login">
+      <option name="closed" value="true" />
+      <created>1731999690904</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1731999690904</updated>
+    </task>
+    <task id="LOCAL-00027" summary="permissions/security">
+      <option name="closed" value="true" />
+      <created>1732001392744</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1732001392744</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,7 +382,8 @@
     <MESSAGE value="profile picture" />
     <MESSAGE value="flash messages" />
     <MESSAGE value="login" />
-    <option name="LAST_COMMIT_MESSAGE" value="login" />
+    <MESSAGE value="permissions/security" />
+    <option name="LAST_COMMIT_MESSAGE" value="permissions/security" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
